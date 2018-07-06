@@ -23,10 +23,10 @@ describe 'user sees all astronauts' do
     it "sees a list of the space missions in alphabetical order for each astronaut." do
       astronaut_1 = Astronaut.create(name: "Neil Armstrong", age: 30, job: "Commander")
       astronaut_2 = Astronaut.create(name: "Buzz Aldrin", age: 40, job: "Commander")
-      mission_1 = astronaut_1.space_missions.create(title: "Apollo 13", trip_length: 15 )
-      mission_2 = astronaut_1.space_missions.create(title: "Capricorn 4", trip_length: 20 )
-      mission_3 = astronaut_2.space_missions.create(title: "Capricorn 4", trip_length: 20 )
-      mission_4 = astronaut_2.space_missions.create(title: "Gemini 7", trip_length: 25 )
+      mission_1 = Space_missions.create(title: "Apollo 13", trip_length: 15, name: astronaut_1.name )
+      mission_2 = Space_missions.create(title: "Capricorn 4", trip_length: 20, name: astronaut_1.name )
+      mission_3 = Space_missions.create(title: "Capricorn 4", trip_length: 20, name: astronaut_2.name )
+      mission_4 = Space_missions.create(title: "Gemini 7", trip_length: 25, name: astronaut_2.name )
 
       visit astronauts_path
 
