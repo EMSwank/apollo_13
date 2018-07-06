@@ -7,7 +7,7 @@ describe Astronaut, type: :model do
       astronaut_1 = Astronaut.create(name: "Buzz Aldrin", age: 50, job: "Commander")
       average_age = 45
 
-      expect(Astronaut.average_age).to eq(45)
+      expect(Astronaut.average_age).to eq(average_age)
 
     end
   end
