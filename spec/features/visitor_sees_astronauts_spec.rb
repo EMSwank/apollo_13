@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'user sees all astronauts' do
   describe 'they visit /astronauts' do
     it 'sees a list of astronauts with name, age, job' do
-      astronaut = Astronaut.create(Name: "Neil Armstrong", Age: 37, Job: "Commander")
+      astronaut = Astronaut.create(name: "Neil Armstrong", age: 37, job: "Commander")
 
       visit astronauts_path
 
